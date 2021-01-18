@@ -102,6 +102,7 @@ So, here the title `SOME VALUABLE TITLE ` has the length of `0x14` and belongs t
 Consequently to me the file structure appeared as follows:
 
 | Byte address |  Content  |
+|:------------:|:----------|
 | 0 -- 3 | `PLST` (header byte or so) |
 | 4 -- 7 | version of file structure |
 | ....   | .... |
