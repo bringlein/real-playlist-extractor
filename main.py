@@ -44,6 +44,7 @@ def extract_rpls_metadata(file_path):
     length_byte = 0
     text_start_byte = 0
     if bytes[87] == 0 and bytes[88] > 0:
+        # could be vendor specific, adapt if necessary
         length_byte = 88
         text_start_byte = 89
     else:
@@ -59,7 +60,9 @@ def extract_rpls_metadata(file_path):
         print("FATAL: {} has not expected bytes at addresses 0x732 and 0x733!\n".format(file_path))
         exit(5)
 
-    fc = bytes[0x734:0x734+9].decode("utf-8")
+    # could be vendor specific, adapt if necessary
+    file_name_length = 9
+    fc = bytes[0x734:0x734+file_name_length].decode("utf-8")
     # ft = fc[-4:].lower()
     # video_file_name = fc[:-4] + "." + ft
     mp4_file_name = fc[:-4] + ".mp4"
