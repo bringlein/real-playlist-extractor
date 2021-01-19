@@ -8,8 +8,8 @@ Background
 
 RPLS is used by some vendors for the BDAV [(Blu-ray Disc Audio/Visual)](https://en.wikipedia.org/wiki/Blu-ray#Application_format) format of Blu-Ray discs to store the metadata of the recorded videos.
 
-BDAV is intended to be used by consumer to safe recorded videos, including from personal camcorders. 
-But it is also used by some DVR/AVR vendors (e.g. Panasonic) as file system for the external HDD.
+BDAV is intended to be used by consumers to safe recorded videos, including from personal camcorders. 
+But it is also used by some DVR/AVR vendors (e.g. Panasonic) as organization schema for the external HDD.
 
 
 The BDAV [file structure](https://en.wikipedia.org/wiki/Blu-ray#Directory_and_file_structure) is as follows:
@@ -36,7 +36,7 @@ BDAV/
 
 - `PLAYLIST` contains the metadata of the videos
 - `STREAM`  contains the videos
-- (`CLIPINF` some scene information etc...not relevant for this script)
+- (`CLIPINF` contains some scene information etc...not relevant for this script)
 
 
 The file file names *do not match*! I.e. it is *not* required that `0001.rpls` belongs to `0001.m2ps`! 
@@ -56,7 +56,7 @@ Usage
 ```
 $ python3.8 main.py /path/to/BDAV/PLAYLIST /path/to/BDAV/STREAM/or-other-video-folder /path/to/processed-and-renamed-output-dir
 ```
-For further details, please see my blog.
+For further details, please see my [blog](https://0xcaffee.de/posts/meihdfs-bdav-rpls-video-recovery/).
 
 ### License
 
@@ -107,7 +107,7 @@ Consequently to me the file structure appeared as follows:
 | 4 -- 7 | version of file structure |
 | ....   | .... |
 | 88     | `length` of the title field |
-| 89 -- 89 + length | the title field |
+| 89 -- 89 + `length` | the title field |
 | ....   |   .... |
 | 1842 -- 1846 | file name in `STREAM` folder |
 | 1847 -- 1850 | file name ending |
