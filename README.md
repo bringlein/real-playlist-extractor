@@ -56,7 +56,8 @@ Usage
 ```
 $ python3.8 main.py /path/to/BDAV/PLAYLIST /path/to/BDAV/STREAM/or-other-video-folder /path/to/processed-and-renamed-output-dir
 ```
-For further details, please see my [blog](https://0xcaffee.de/posts/meihdfs-bdav-rpls-video-recovery/).
+
+For further details, please see my [blog](https://0xcaffee.blog/posts/meihdfs-bdav-rpls-video-recovery/).
 
 ### License
 
@@ -115,6 +116,5 @@ Consequently to me the file structure appeared as follows:
 
 
 I've also found a [german blog entry](https://schueckvcr.com/2017/10/24/real-playlists-rpls-file-reader/) with some more file structure information, but only parts of the reported structure were valid in my case.
-
 
 
